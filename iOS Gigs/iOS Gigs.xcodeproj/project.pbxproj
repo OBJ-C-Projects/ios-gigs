@@ -17,6 +17,7 @@
 		04BF0780289444080085AB80 /* iOS_GigsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF077F289444080085AB80 /* iOS_GigsUITests.m */; };
 		04BF0782289444080085AB80 /* iOS_GigsUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0781289444080085AB80 /* iOS_GigsUITestsLaunchTests.m */; };
 		04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF07922894468D0085AB80 /* GigsTableViewController.m */; };
+		04BF07972894477D0085AB80 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF07962894477D0085AB80 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		04BF0781289444080085AB80 /* iOS_GigsUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_GigsUITestsLaunchTests.m; sourceTree = "<group>"; };
 		04BF07912894468D0085AB80 /* GigsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GigsTableViewController.h; sourceTree = "<group>"; };
 		04BF07922894468D0085AB80 /* GigsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GigsTableViewController.m; sourceTree = "<group>"; };
+		04BF07952894477D0085AB80 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		04BF07962894477D0085AB80 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 			children = (
 				04BF07912894468D0085AB80 /* GigsTableViewController.h */,
 				04BF07922894468D0085AB80 /* GigsTableViewController.m */,
+				04BF07952894477D0085AB80 /* LoginViewController.h */,
+				04BF07962894477D0085AB80 /* LoginViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */,
 				04BF076C289444070085AB80 /* main.m in Sources */,
 				04BF075E289444070085AB80 /* SceneDelegate.m in Sources */,
+				04BF07972894477D0085AB80 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
