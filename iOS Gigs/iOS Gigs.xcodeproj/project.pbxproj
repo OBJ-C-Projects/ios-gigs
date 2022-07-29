@@ -16,6 +16,7 @@
 		04BF0776289444080085AB80 /* iOS_GigsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0775289444080085AB80 /* iOS_GigsTests.m */; };
 		04BF0780289444080085AB80 /* iOS_GigsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF077F289444080085AB80 /* iOS_GigsUITests.m */; };
 		04BF0782289444080085AB80 /* iOS_GigsUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0781289444080085AB80 /* iOS_GigsUITestsLaunchTests.m */; };
+		04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF07922894468D0085AB80 /* GigsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		04BF077B289444080085AB80 /* iOS GigsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS GigsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BF077F289444080085AB80 /* iOS_GigsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_GigsUITests.m; sourceTree = "<group>"; };
 		04BF0781289444080085AB80 /* iOS_GigsUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_GigsUITestsLaunchTests.m; sourceTree = "<group>"; };
+		04BF07912894468D0085AB80 /* GigsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GigsTableViewController.h; sourceTree = "<group>"; };
+		04BF07922894468D0085AB80 /* GigsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GigsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				04BF078E289445480085AB80 /* Application */,
-				04BF078F2894455C0085AB80 /* Storyboards */,
 				04BF0790289445730085AB80 /* Resources */,
+				04BF078F2894455C0085AB80 /* Storyboards */,
+				04BF0794289446920085AB80 /* View Controllers */,
 			);
 			path = "iOS Gigs";
 			sourceTree = "<group>";
@@ -153,6 +157,15 @@
 				04BF076B289444070085AB80 /* main.m */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		04BF0794289446920085AB80 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04BF07912894468D0085AB80 /* GigsTableViewController.h */,
+				04BF07922894468D0085AB80 /* GigsTableViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BF075B289444070085AB80 /* AppDelegate.m in Sources */,
+				04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */,
 				04BF076C289444070085AB80 /* main.m in Sources */,
 				04BF075E289444070085AB80 /* SceneDelegate.m in Sources */,
 			);
