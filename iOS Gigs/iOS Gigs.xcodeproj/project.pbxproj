@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		04BF075B289444070085AB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF075A289444070085AB80 /* AppDelegate.m */; };
 		04BF075E289444070085AB80 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF075D289444070085AB80 /* SceneDelegate.m */; };
-		04BF0761289444070085AB80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0760289444070085AB80 /* ViewController.m */; };
 		04BF0764289444070085AB80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BF0762289444070085AB80 /* Main.storyboard */; };
 		04BF0766289444070085AB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BF0765289444070085AB80 /* Assets.xcassets */; };
 		04BF0769289444070085AB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BF0767289444070085AB80 /* LaunchScreen.storyboard */; };
@@ -42,8 +41,6 @@
 		04BF075A289444070085AB80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04BF075C289444070085AB80 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		04BF075D289444070085AB80 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		04BF075F289444070085AB80 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04BF0760289444070085AB80 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		04BF0763289444070085AB80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04BF0765289444070085AB80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BF0768289444070085AB80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,17 +101,9 @@
 		04BF0758289444070085AB80 /* iOS Gigs */ = {
 			isa = PBXGroup;
 			children = (
-				04BF0759289444070085AB80 /* AppDelegate.h */,
-				04BF075A289444070085AB80 /* AppDelegate.m */,
-				04BF075C289444070085AB80 /* SceneDelegate.h */,
-				04BF075D289444070085AB80 /* SceneDelegate.m */,
-				04BF075F289444070085AB80 /* ViewController.h */,
-				04BF0760289444070085AB80 /* ViewController.m */,
-				04BF0762289444070085AB80 /* Main.storyboard */,
-				04BF0765289444070085AB80 /* Assets.xcassets */,
-				04BF0767289444070085AB80 /* LaunchScreen.storyboard */,
-				04BF076A289444070085AB80 /* Info.plist */,
-				04BF076B289444070085AB80 /* main.m */,
+				04BF078E289445480085AB80 /* Application */,
+				04BF078F2894455C0085AB80 /* Storyboards */,
+				04BF0790289445730085AB80 /* Resources */,
 			);
 			path = "iOS Gigs";
 			sourceTree = "<group>";
@@ -134,6 +123,36 @@
 				04BF0781289444080085AB80 /* iOS_GigsUITestsLaunchTests.m */,
 			);
 			path = "iOS GigsUITests";
+			sourceTree = "<group>";
+		};
+		04BF078E289445480085AB80 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				04BF0759289444070085AB80 /* AppDelegate.h */,
+				04BF075A289444070085AB80 /* AppDelegate.m */,
+				04BF075C289444070085AB80 /* SceneDelegate.h */,
+				04BF075D289444070085AB80 /* SceneDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		04BF078F2894455C0085AB80 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04BF0762289444070085AB80 /* Main.storyboard */,
+				04BF0767289444070085AB80 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		04BF0790289445730085AB80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04BF0765289444070085AB80 /* Assets.xcassets */,
+				04BF076A289444070085AB80 /* Info.plist */,
+				04BF076B289444070085AB80 /* main.m */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +285,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BF0761289444070085AB80 /* ViewController.m in Sources */,
 				04BF075B289444070085AB80 /* AppDelegate.m in Sources */,
 				04BF076C289444070085AB80 /* main.m in Sources */,
 				04BF075E289444070085AB80 /* SceneDelegate.m in Sources */,
@@ -444,7 +462,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3P8URX7UV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS Gigs/Info.plist";
+				INFOPLIST_FILE = "iOS Gigs/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -471,7 +489,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3P8URX7UV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iOS Gigs/Info.plist";
+				INFOPLIST_FILE = "iOS Gigs/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
