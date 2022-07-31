@@ -6,6 +6,7 @@
 //
 
 #import "GigsTableViewController.h"
+#import "LoginViewController.h"
 
 @interface GigsTableViewController ()
 
@@ -16,22 +17,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.view.backgroundColor = UIColor.redColor;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    loginVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return 0;
 }
 
@@ -88,5 +90,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end
