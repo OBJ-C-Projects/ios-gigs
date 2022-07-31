@@ -34,7 +34,7 @@
     stackView.axis = UILayoutConstraintAxisVertical;
     stackView.spacing = 10;
     stackView.distribution = UIStackViewDistributionFill;
-//    stackView.alignment = UIStackViewAlignmentCenter;
+    stackView.alignment = UIStackViewAlignmentCenter;
     
     [self.view addSubview:stackView];
 
@@ -74,21 +74,37 @@
     bottomTextField.backgroundColor = UIColor.whiteColor;
     
     
+    
+    
+    //1.Create Stack View for buttons
+    UIStackView *buttonsStackView = [[UIStackView alloc] init];
+    buttonsStackView.translatesAutoresizingMaskIntoConstraints = NO;
+    buttonsStackView.axis = UILayoutConstraintAxisVertical;
+    buttonsStackView.spacing = 10;
+    buttonsStackView.distribution = UIStackViewDistributionFill;
+    buttonsStackView.alignment = UIStackViewAlignmentCenter;
+    
+    [self.view addSubview:buttonsStackView];
+
+    [[buttonsStackView.topAnchor constraintEqualToAnchor:stackView.bottomAnchor constant:40] setActive:YES];
+    [[buttonsStackView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16] setActive:YES];
+    [[buttonsStackView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16] setActive:YES];
+    
+    
     //3.Create a sign in/up button
     UIButton *signInButton = [[UIButton alloc] init];
     signInButton.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [stackView addArrangedSubview:signInButton];
+    [buttonsStackView addArrangedSubview:signInButton];
     
-//    [[signInButton.topAnchor constraintEqualToAnchor:bottomTextField.bottomAnchor constant:50]setActive:YES];
-//    [[signInButton.leadingAnchor constraintEqualToAnchor:stackView.leadingAnchor constant:32] setActive:YES];
-//    [[signInButton.trailingAnchor constraintEqualToAnchor:stackView.trailingAnchor constant:-32] setActive:YES];
+    [[signInButton.leadingAnchor constraintEqualToAnchor:buttonsStackView.leadingAnchor constant:48] setActive:YES];
+    [[signInButton.trailingAnchor constraintEqualToAnchor:buttonsStackView.trailingAnchor constant:-48] setActive:YES];
 
     signInButton.backgroundColor = UIColor.whiteColor;
     [signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
     [signInButton setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
     
-    //4. Add SiwA button
+    //TODO: ❌ Add SiwA button
 }
 
 
