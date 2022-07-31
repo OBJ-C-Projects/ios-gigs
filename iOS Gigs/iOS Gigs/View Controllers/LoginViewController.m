@@ -7,6 +7,7 @@
 
 #import "LoginViewController.h"
 #import "GigsTextField.h"
+#import<AuthenticationServices/AuthenticationServices.h>
 
 @interface LoginViewController ()
 
@@ -103,9 +104,23 @@
     signInButton.backgroundColor = UIColor.whiteColor;
     [signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
     [signInButton setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
+    signInButton.layer.cornerRadius = 8;
     
-    //TODO: ❌ Add SiwA button
+    
+    //4. SiwA button
+    ASAuthorizationAppleIDButton *siwaButton = [[ASAuthorizationAppleIDButton alloc] init];
+    [siwaButton addTarget:self action:@selector(handleAuthorizationAppleIDButtonPress) forControlEvents:UIControlEventTouchUpInside];
+    
+    [buttonsStackView addArrangedSubview:siwaButton];
+
+    [[siwaButton.heightAnchor constraintEqualToAnchor:signInButton.heightAnchor] setActive:YES];
+    [[siwaButton.leadingAnchor constraintEqualToAnchor:signInButton.leadingAnchor] setActive:YES];
+    [[siwaButton.trailingAnchor constraintEqualToAnchor:signInButton.trailingAnchor] setActive:YES];
 }
 
+
+- (void)handleAuthorizationAppleIDButtonPress{
+    
+}
 
 @end
