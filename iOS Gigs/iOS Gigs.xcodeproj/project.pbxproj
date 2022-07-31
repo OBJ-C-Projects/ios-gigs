@@ -17,6 +17,7 @@
 		04BF0782289444080085AB80 /* iOS_GigsUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF0781289444080085AB80 /* iOS_GigsUITestsLaunchTests.m */; };
 		04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF07922894468D0085AB80 /* GigsTableViewController.m */; };
 		04BF07972894477D0085AB80 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF07962894477D0085AB80 /* LoginViewController.m */; };
+		04FE180A2896E63D00C0EE2B /* GigsTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE18092896E63D00C0EE2B /* GigsTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		04BF07922894468D0085AB80 /* GigsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GigsTableViewController.m; sourceTree = "<group>"; };
 		04BF07952894477D0085AB80 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		04BF07962894477D0085AB80 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		04FE18082896E63D00C0EE2B /* GigsTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GigsTextField.h; sourceTree = "<group>"; };
+		04FE18092896E63D00C0EE2B /* GigsTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GigsTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 				04BF0790289445730085AB80 /* Resources */,
 				04BF078F2894455C0085AB80 /* Storyboards */,
 				04BF0794289446920085AB80 /* View Controllers */,
+				04FE180B2896E64100C0EE2B /* Views */,
 			);
 			path = "iOS Gigs";
 			sourceTree = "<group>";
@@ -168,6 +172,15 @@
 				04BF07962894477D0085AB80 /* LoginViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		04FE180B2896E64100C0EE2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04FE18082896E63D00C0EE2B /* GigsTextField.h */,
+				04FE18092896E63D00C0EE2B /* GigsTextField.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +315,7 @@
 				04BF075B289444070085AB80 /* AppDelegate.m in Sources */,
 				04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */,
 				04BF076C289444070085AB80 /* main.m in Sources */,
+				04FE180A2896E63D00C0EE2B /* GigsTextField.m in Sources */,
 				04BF075E289444070085AB80 /* SceneDelegate.m in Sources */,
 				04BF07972894477D0085AB80 /* LoginViewController.m in Sources */,
 			);
