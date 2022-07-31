@@ -7,7 +7,6 @@
 
 #import "LoginViewController.h"
 #import "GigsTextField.h"
-#import<AuthenticationServices/AuthenticationServices.h>
 
 @interface LoginViewController ()
 
@@ -15,18 +14,15 @@
 
 @implementation LoginViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.greenColor;
 }
 
-
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
     [self setupSubViews];
 }
-
 
 - (void)setupSubViews {
     //1.Create Stack View
@@ -42,7 +38,6 @@
     [[stackView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor] setActive:YES];
     [[stackView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:16] setActive:YES];
     [[stackView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16] setActive:YES];
-
 
     //2.Create a text field for user name
     GigsTextField *topTextField = [[GigsTextField alloc] init];
@@ -73,9 +68,6 @@
     
     [bottomTextField setPlaceholder:@"Password"];
     bottomTextField.backgroundColor = UIColor.whiteColor;
-    
-    
-    
     
     //1.Create Stack View for buttons
     UIStackView *buttonsStackView = [[UIStackView alloc] init];
@@ -118,9 +110,15 @@
     [[siwaButton.trailingAnchor constraintEqualToAnchor:signInButton.trailingAnchor] setActive:YES];
 }
 
-
 - (void)handleAuthorizationAppleIDButtonPress{
+    ASAuthorizationAppleIDProvider *appleIDProvider = [[ASAuthorizationAppleIDProvider alloc] init];
+    ASAuthorizationAppleIDRequest *request = [appleIDProvider createRequest];
+    request.requestedScopes =  @[ASAuthorizationScopeFullName, ASAuthorizationScopeEmail];
     
+    ASAuthorizationController *authController = [[ASAuthorizationController alloc] initWithAuthorizationRequests:@[request]];
+    authController.delegate = self;
+    authController.presentationContextProvider = self;
+    [authController performRequests];
 }
 
 @end
