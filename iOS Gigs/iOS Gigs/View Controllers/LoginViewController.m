@@ -96,6 +96,7 @@
     [topTextField setPlaceholder:@"User Name"];
     topTextField.backgroundColor = UIColor.whiteColor;
     topTextField.textContentType = UITextContentTypeUsername;
+    topTextField.layer.cornerRadius = 8.0;
     
     //3.Create a text field for password
     GigsTextField *bottomTextField = [[GigsTextField alloc] init];
@@ -112,6 +113,7 @@
     [bottomTextField setPlaceholder:@"Password"];
     bottomTextField.backgroundColor = UIColor.whiteColor;
     bottomTextField.textContentType =  UITextContentTypePassword;
+    bottomTextField.layer.cornerRadius = 8.0;
     
 }
 
@@ -142,7 +144,8 @@
 
     _signInButton.backgroundColor = UIColor.whiteColor;
     [_signInButton setTitle:@"Sign in" forState:UIControlStateNormal];
-    [_signInButton setTitleColor:UIColor.grayColor forState:UIControlStateNormal];
+    [_signInButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [_signInButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
     _signInButton.layer.cornerRadius = 8;
     
     
