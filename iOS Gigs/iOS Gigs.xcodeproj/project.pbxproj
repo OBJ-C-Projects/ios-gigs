@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040290A228A2AD7800F20B1A /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 040290A128A2AD7800F20B1A /* User.m */; };
 		0415B39F28A6A51B00238882 /* Bearer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415B39E28A6A51B00238882 /* Bearer.m */; };
+		0415B3A228A6A86C00238882 /* GigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0415B3A128A6A86C00238882 /* GigController.m */; };
 		04BF075B289444070085AB80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF075A289444070085AB80 /* AppDelegate.m */; };
 		04BF075E289444070085AB80 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BF075D289444070085AB80 /* SceneDelegate.m */; };
 		04BF0766289444070085AB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BF0765289444070085AB80 /* Assets.xcassets */; };
@@ -45,6 +46,8 @@
 		040290A128A2AD7800F20B1A /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0415B39D28A6A51B00238882 /* Bearer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bearer.h; sourceTree = "<group>"; };
 		0415B39E28A6A51B00238882 /* Bearer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bearer.m; sourceTree = "<group>"; };
+		0415B3A028A6A86C00238882 /* GigController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GigController.h; sourceTree = "<group>"; };
+		0415B3A128A6A86C00238882 /* GigController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GigController.m; sourceTree = "<group>"; };
 		04BF0756289444070085AB80 /* iOS Gigs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Gigs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BF0759289444070085AB80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BF075A289444070085AB80 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +109,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0415B3A328A6A87100238882 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0415B3A028A6A86C00238882 /* GigController.h */,
+				0415B3A128A6A86C00238882 /* GigController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		04BF074D289444070085AB80 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				04BF078E289445480085AB80 /* Application */,
+				0415B3A328A6A87100238882 /* Controllers */,
 				04FE180F289704CD00C0EE2B /* iOS Gigs.entitlements */,
 				040290A328A2AD8000F20B1A /* Model */,
 				04BF0790289445730085AB80 /* Resources */,
@@ -344,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0415B3A228A6A86C00238882 /* GigController.m in Sources */,
 				04BF075B289444070085AB80 /* AppDelegate.m in Sources */,
 				040290A228A2AD7800F20B1A /* User.m in Sources */,
 				04BF07932894468D0085AB80 /* GigsTableViewController.m in Sources */,
