@@ -12,6 +12,9 @@
 @property UIStackView *middleStackView;
 @property UIButton *signInButton;
 @property UISegmentedControl *segmentedConteller;
+@property GigsTextField *topTextField;
+@property GigsTextField *bottomTextField;
+
 @end
 
 @implementation LoginViewController
@@ -82,38 +85,38 @@
     [[_middleStackView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-16] setActive:YES];
 
     //2.Create a text field for user name
-    GigsTextField *topTextField = [[GigsTextField alloc] init];
-    topTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    _topTextField = [[GigsTextField alloc] init];
+    _topTextField.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [_middleStackView addArrangedSubview:topTextField];
+    [_middleStackView addArrangedSubview:_topTextField];
     
-    [[topTextField.leadingAnchor constraintEqualToAnchor:_middleStackView.leadingAnchor] setActive:YES];
-    [[topTextField.trailingAnchor constraintEqualToAnchor:_middleStackView.trailingAnchor] setActive:YES];
-    [[topTextField.heightAnchor constraintEqualToConstant:32] setActive:YES];
-    [topTextField setRightPadding:8];
-    [topTextField setLeftPadding:8];
+    [[_topTextField.leadingAnchor constraintEqualToAnchor:_middleStackView.leadingAnchor] setActive:YES];
+    [[_topTextField.trailingAnchor constraintEqualToAnchor:_middleStackView.trailingAnchor] setActive:YES];
+    [[_topTextField.heightAnchor constraintEqualToConstant:32] setActive:YES];
+    [_topTextField setRightPadding:8];
+    [_topTextField setLeftPadding:8];
     
-    [topTextField setPlaceholder:@"User Name"];
-    topTextField.backgroundColor = UIColor.whiteColor;
-    topTextField.textContentType = UITextContentTypeUsername;
-    topTextField.layer.cornerRadius = 8.0;
+    [_topTextField setPlaceholder:@"User Name"];
+    _topTextField.backgroundColor = UIColor.whiteColor;
+    _topTextField.textContentType = UITextContentTypeUsername;
+    _topTextField.layer.cornerRadius = 8.0;
     
     //3.Create a text field for password
-    GigsTextField *bottomTextField = [[GigsTextField alloc] init];
-    bottomTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    _bottomTextField = [[GigsTextField alloc] init];
+    _bottomTextField.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [_middleStackView addArrangedSubview:bottomTextField];
+    [_middleStackView addArrangedSubview:_bottomTextField];
     
-    [[bottomTextField.leadingAnchor constraintEqualToAnchor:topTextField.leadingAnchor] setActive:YES];
-    [[bottomTextField.trailingAnchor constraintEqualToAnchor:topTextField.trailingAnchor] setActive:YES];
-    [[bottomTextField.heightAnchor constraintEqualToAnchor:topTextField.heightAnchor] setActive:YES];
-    [bottomTextField setRightPadding:8];
-    [bottomTextField setLeftPadding:8];
+    [[_bottomTextField.leadingAnchor constraintEqualToAnchor:_topTextField.leadingAnchor] setActive:YES];
+    [[_bottomTextField.trailingAnchor constraintEqualToAnchor:_topTextField.trailingAnchor] setActive:YES];
+    [[_bottomTextField.heightAnchor constraintEqualToAnchor:_topTextField.heightAnchor] setActive:YES];
+    [_bottomTextField setRightPadding:8];
+    [_bottomTextField setLeftPadding:8];
     
-    [bottomTextField setPlaceholder:@"Password"];
-    bottomTextField.backgroundColor = UIColor.whiteColor;
-    bottomTextField.textContentType =  UITextContentTypePassword;
-    bottomTextField.layer.cornerRadius = 8.0;
+    [_bottomTextField setPlaceholder:@"Password"];
+    _bottomTextField.backgroundColor = UIColor.whiteColor;
+    _bottomTextField.textContentType =  UITextContentTypePassword;
+    _bottomTextField.layer.cornerRadius = 8.0;
     
 }
 
@@ -147,6 +150,7 @@
     [_signInButton setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [_signInButton setTitleColor:UIColor.grayColor forState:UIControlStateHighlighted];
     _signInButton.layer.cornerRadius = 8;
+    [_signInButton addTarget:self action:@selector(handleNormalAuthorizationButtonPress) forControlEvents:UIControlEventTouchUpInside];
     
     
     //4. SiwA button
@@ -161,6 +165,18 @@
 }
 
 #pragma mark - Actions
+
+- (void)handleNormalAuthorizationButtonPress{
+    
+    if (_bottomTextField.text.length > 0 && _topTextField.text.length > 0) {
+        NSLog(@"✅Clicked sign in");
+    }else{
+        NSLog(@"❌Text field must not be empty!");
+    }
+    
+    
+}
+
 - (void)handleAuthorizationAppleIDButtonPress{
     ASAuthorizationAppleIDProvider *appleIDProvider = [[ASAuthorizationAppleIDProvider alloc] init];
     ASAuthorizationAppleIDRequest *request = [appleIDProvider createRequest];
